@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(AlarmClock.ACTION_SET_TIMER);
                 intent.putExtra(AlarmClock.EXTRA_LENGTH, 1800);
+                intent.putExtra(AlarmClock.EXTRA_MESSAGE, "Smacznego! <3");
                 startActivity(intent);
             }
         });
