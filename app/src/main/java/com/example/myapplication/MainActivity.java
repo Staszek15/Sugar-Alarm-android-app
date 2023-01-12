@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         mSetAlarmButton60 = (Button) findViewById(R.id.button60);
 
 
-
         mSetAlarmButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
