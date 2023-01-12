@@ -4,4 +4,6 @@
     <string name="button20_text">20 min</string>
     <string name="button30_text">30 min</string>
     <string name="button60_text">1 h</string>
+    <string name="pink_mode">Pink mode</string>
+    <string name="turn_on_alarms">Alarms</string>
 </resources>

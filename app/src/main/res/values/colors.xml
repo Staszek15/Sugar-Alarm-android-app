@@ -7,4 +7,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pink_button">#FF4081</color>
     <color name="pink_background">#F8BBD0</color>
+    <color name="dirty_white">#dbdad7</color>
 </resources>
