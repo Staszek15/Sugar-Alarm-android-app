@@ -1,7 +1,7 @@
 # Sugar-Alarm-android-app
 App for diabetics to easily remind them about measuring sugar level after selected time. Created at my diabetic friend's request.
 
-![alt text](https://user-images.githubusercontent.com/98673048/213800633-78db876f-5d55-42e0-974c-879f13b57629.jpg)
+![alt text](https://user-images.githubusercontent.com/98673048/213800633-78db876f-5d55-42e0-974c-879f13b57629.jpg | width=100)
 
 
 ## What is the purpose of this app?
