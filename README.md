@@ -8,4 +8,4 @@ check possible malfunction of the sensor. 10 min delay. glucose meter
 
 
 ## How to download the app?
-Navigate to releases. Choose the latest one and download the .apk file.
+Navigate to releases on the right side. Choose the latest one and download the .apk file.
