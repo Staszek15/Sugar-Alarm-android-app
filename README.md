@@ -18,7 +18,7 @@ Moreover, there aren't many devices that make a diabetic's life easier. If one d
 Navigate to releases on the right side. Choose the latest one and download the .apk file.
 
 
-## Feautres
+## How is it built?
 * constraint layout
 * vertically chained buttons
 * scaling
