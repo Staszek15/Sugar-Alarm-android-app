@@ -14,7 +14,7 @@ Due to unstable sugar levels, diabetics need to check its behaviour after some t
 Moreover, there aren't many devices that make a diabetic's life easier. If one does not have an insulin pump, then ones of the most commonly used devices are sensors. They provide the possibility to check sugar level via smartphone NFC scan. They are considered as a very reliable source of information so there is no need to use glucose meter on daily basis. That is why it is of vital importance to detect any malfunction of the sensors. They work on 10 minutes delay so diabetics can also use this app to set the alarm to precisely control the sensor with glucose meter.
 
 
-# Further development
+## Further development
 Next update will finally contain functionality of the settings switches. 
 
 
