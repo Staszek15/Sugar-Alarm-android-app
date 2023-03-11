@@ -2,8 +2,8 @@
 App for diabetics to easily remind them about measuring sugar level after selected time. Created at my diabetic friend's request.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/98673048/213800633-78db876f-5d55-42e0-974c-879f13b57629.jpg" width=20%>
-  <img src="https://user-images.githubusercontent.com/98673048/213800629-196879c4-a3ff-4eed-a8a7-d723e3d45143.jpg" width=20%>
+  <img src="https://user-images.githubusercontent.com/98673048/224492495-868e3275-de42-4583-9e66-59ba8ab5b0f0.png" width=40%>
+  <img src="https://user-images.githubusercontent.com/98673048/224492451-f4cc459b-7084-4bdb-b686-410cde3ccca4.png" width=40%>
 
 </p>
 
