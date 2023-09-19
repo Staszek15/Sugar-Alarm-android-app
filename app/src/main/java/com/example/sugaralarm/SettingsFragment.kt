@@ -28,7 +28,7 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
 
     ): View {
-        var themeColor = pref?.getString("themeColor", "pink")
+        val themeColor = pref?.getString("themeColor", "pink")
         setDynamicTheme(themeColor)
 
         _binding = FragmentSettingsBinding.inflate(layoutInflater, container, false)
