@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.toolbar.toolbar.setOnMenuItemClickListener {
-             when (it.itemId) {
+            when (it.itemId) {
                 R.id.settings -> {
                     findNavController().navigate(R.id.action_homeFragment_to_settingsFragment)
                     true
@@ -65,25 +65,25 @@ class HomeFragment : Fragment() {
     }
 }
 
-    //choice between timer intent and alarm intent (based on switch position)
-    fun chooseIntent(time: Int): Intent {
-        val bool = false
-            //intent.getBooleanExtra("alarms_boolean", false)
-        var selectedIntent = Intent()
+//choice between timer intent and alarm intent (based on switch position)
+fun chooseIntent(time: Int): Intent {
+    val bool = false
+    //intent.getBooleanExtra("alarms_boolean", false)
+    var selectedIntent = Intent()
 
-        // this if is always false coz var bool should be taken from intent.getBoolean
-        selectedIntent = if (bool) {
-            Intent(AlarmClock.ACTION_SET_ALARM).apply {
-                putExtra(AlarmClock.EXTRA_HOUR, 18)
-                putExtra(AlarmClock.EXTRA_MINUTES, 10)
-            }
-        } else {
-            Intent(AlarmClock.ACTION_SET_TIMER).apply {
-                putExtra(AlarmClock.EXTRA_LENGTH, time)
-            }
+    // this if is always false coz var bool should be taken from intent.getBoolean
+    selectedIntent = if (bool) {
+        Intent(AlarmClock.ACTION_SET_ALARM).apply {
+            putExtra(AlarmClock.EXTRA_HOUR, 18)
+            putExtra(AlarmClock.EXTRA_MINUTES, 10)
         }
-        return selectedIntent
+    } else {
+        Intent(AlarmClock.ACTION_SET_TIMER).apply {
+            putExtra(AlarmClock.EXTRA_LENGTH, time)
+        }
     }
+    return selectedIntent
+}
 
 
 
