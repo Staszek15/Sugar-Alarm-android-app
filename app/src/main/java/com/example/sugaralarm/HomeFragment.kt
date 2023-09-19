@@ -4,30 +4,22 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.AlarmClock
 import android.view.*
-import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
-import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.viewModels
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.sugaralarm.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null  //define the binding class
-    private val binding get() = _binding!!  // so it can not be null now
+    private lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.toolbar.toolbar.inflateMenu(R.menu.menu)      // set toolbar
         binding.toolbar.toolbar.setTitle(R.string.app_name)
-
         return binding.root
     }
 
@@ -58,11 +50,6 @@ class HomeFragment : Fragment() {
         }
     }
 
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
 
 //choice between timer intent and alarm intent (based on switch position)
