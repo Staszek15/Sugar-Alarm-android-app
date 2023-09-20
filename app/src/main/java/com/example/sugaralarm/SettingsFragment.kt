@@ -1,31 +1,28 @@
 package com.example.sugaralarm
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.example.sugaralarm.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
 
     private lateinit var binding: FragmentSettingsBinding
-    private val pref = activity?.getPreferences(Context.MODE_PRIVATE)
-    private val prefEditor = pref?.edit()
+    private val sharedPref by lazy { getDefaultSharedPreferences(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-
     ): View {
-        val themeColor = pref?.getString("themeColor", "pink")
-        setDynamicTheme(themeColor)
-
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
         binding.toolbar.toolbar.inflateMenu(R.menu.menu)
         binding.toolbar.toolbar.setTitle(R.string.settings_text)
@@ -36,45 +33,26 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // set toolbar back arrow navigation
-        binding.toolbar.toolbar.setNavigationOnClickListener {
-            findNavController().navigateUp()
-        }
+        setupClickListeners()
+    }
 
-        // theme buttons
-        binding.buttonBlue.setOnClickListener {
-            prefEditor?.putString("themeColor", "blue")
-            prefEditor?.apply()
-            binding.text1.text = pref?.getString("themeColor", "none")
-
-        }
-
-        binding.buttonPink.setOnClickListener {
-            prefEditor?.putString("themeColor", "pink")
-            prefEditor?.apply()
-            binding.text1.text = pref?.getString("themeColor", "none")
-        }
-
-        // github button
+    private fun setupClickListeners() {
+        binding.toolbar.toolbar.setNavigationOnClickListener { findNavController().navigateUp() }
+        binding.buttonBlue.setOnClickListener {setChosenTheme("blue")}
+        binding.buttonPink.setOnClickListener {setChosenTheme("pink")}
         binding.buttonGithub.setOnClickListener {
             val githubLink = "https://github.com/Staszek15"
             val githubIntent = Intent(Intent.ACTION_VIEW, Uri.parse(githubLink))
             startActivity(githubIntent)
         }
-
-        binding.switch2.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) prefEditor?.putBoolean("alarms", true)
-            else prefEditor?.putBoolean("alarms", false)
-        }
-        // binding.switch2.setOnCheckedChangeListener {buttonView, isChecked -> MainVm.intent="alarm"}
     }
 
-
-    private fun setDynamicTheme(themeColor: String?) {
+    private fun setChosenTheme(themeColor: String?) {
         when (themeColor) {
-            "pink" -> activity?.theme?.applyStyle(R.style.Theme_SugarAlarm, true)
-            "blue" -> activity?.theme?.applyStyle(R.style.Theme_BlueMode, true)
+            "pink" -> activity?.theme?.applyStyle(R.style.Theme_PinkTheme, true)
+            "blue" -> activity?.theme?.applyStyle(R.style.Theme_BlueTheme, true)
         }
+        sharedPref.edit { putString("themeColor", themeColor) }
     }
 
 }

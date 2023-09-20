@@ -9,5 +9,7 @@
     <string name="blue_mode">Blue mode</string>
     <string name="turn_on_alarms">Alarms</string>
     <string name="text_github">Author\'s Github</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

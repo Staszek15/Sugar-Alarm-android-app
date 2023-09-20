@@ -59,14 +59,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="177dp"
-        android:layout_height="79dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button_github"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_pink" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
