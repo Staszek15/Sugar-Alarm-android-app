@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.app.ActivityCompat.recreate
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -49,10 +50,11 @@ class SettingsFragment : Fragment() {
 
     private fun setChosenTheme(themeColor: String?) {
         when (themeColor) {
-            "pink" -> activity?.theme?.applyStyle(R.style.Theme_PinkTheme, true)
-            "blue" -> activity?.theme?.applyStyle(R.style.Theme_BlueTheme, true)
+            "pink" -> activity?.setTheme(R.style.Theme_PinkTheme)
+            "blue" -> activity?.setTheme(R.style.Theme_BlueTheme)
         }
         sharedPref.edit { putString("themeColor", themeColor) }
+        recreate(requireActivity())
     }
 
 }

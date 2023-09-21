@@ -16,17 +16,29 @@ class MainActivity : AppCompatActivity() {
     private val sharedPref by lazy { getDefaultSharedPreferences(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.Theme_BlueTheme)
+
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)  //call always before setContentView
+        setPreferredTheme()
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
         navController = navHostFragment.navController
 
         // turn off night mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+    }
+
+    private fun setPreferredTheme() {
+        when (sharedPref.getString("themeColor", "pink")) {
+            "blue" -> setTheme(R.style.Theme_BlueTheme)
+            "green" -> setTheme(R.style.Theme_PinkTheme)
+            else -> setTheme(R.style.Theme_PinkTheme)
+        }
+
+
     }
 
 }
