@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="48dp">
+
+    <Button
+        android:id="@+id/button_pink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink_button"
+        android:padding="12dp"
+        android:text="@string/pink_mode"
+        app:cornerRadius="90dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_blue"
+        android:textSize="12sp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/navy_button"
+        android:padding="12dp"
+        android:text="@string/blue_mode"
+        app:cornerRadius="90dp"
+
+        app:layout_constraintEnd_toStartOf="@id/button_green"
+        app:layout_constraintStart_toEndOf="@+id/button_pink"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_green"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:padding="12dp"
+        android:text="@string/green_theme"
+        app:cornerRadius="90dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_blue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

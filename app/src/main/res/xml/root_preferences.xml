@@ -1,0 +1,38 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/general_header">
+
+        <SwitchPreferenceCompat
+            app:key="notificationType"
+            app:summaryOff="@string/general_summary_off"
+            app:summaryOn="@string/general_summary_on"
+            app:title="@string/notification_type_title" />
+
+        <ListPreference
+            app:defaultValue="English"
+            app:entries="@array/languages"
+            app:entryValues="@array/languages"
+            app:key="language"
+            app:title="@string/language_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            android:widgetLayout="@layout/switch_settings"
+            app:title="custom switch" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:summary="Select your favourite theme below."
+        app:title="@string/appearance_header">
+
+        <Preference
+            app:key="theme_buttons_key"
+            app:layout="@layout/theme_buttons_settings" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

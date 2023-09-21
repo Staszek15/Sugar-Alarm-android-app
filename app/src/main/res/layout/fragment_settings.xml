@@ -10,6 +10,7 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar_layout" />
 
+
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch2"
         android:layout_width="wrap_content"

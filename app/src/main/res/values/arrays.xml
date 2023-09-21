@@ -1,0 +1,10 @@
+<resources>
+    <!-- Languages Preference -->
+    <string-array name="languages">
+        <item>English</item>
+        <item>Polish</item>
+        <item>French</item>
+        <item>German</item>
+    </string-array>
+
+</resources>

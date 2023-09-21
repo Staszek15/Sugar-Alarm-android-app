@@ -5,11 +5,22 @@
     <string name="button20_text">20 min</string>
     <string name="button30_text">30 min</string>
     <string name="button60_text">1 h</string>
-    <string name="pink_mode">Pink mode</string>
-    <string name="blue_mode">Blue mode</string>
+    <string name="pink_mode">Pink\n theme</string>
+    <string name="blue_mode">Blue\n theme</string>
     <string name="turn_on_alarms">Alarms</string>
     <string name="text_github">Author\'s Github</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Appearance Preferences -->
+    <string name="appearance_header">Appearance</string>
+
+
+    <!-- General Preferences -->
+    <string name="general_header">General</string>
+    <string name="general_summary_off">Alarms will be used instead of timers.</string>
+    <string name="general_summary_on">Timers will be used instead of alarms.</string>
+    <string name="notification_type_title">Notification type</string>
+    <string name="language_title">Language</string>
+    <string name="green_theme">Green\n theme</string>
 
 </resources>
