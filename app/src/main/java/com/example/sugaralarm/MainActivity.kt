@@ -3,16 +3,15 @@ package com.example.sugaralarm
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.example.sugaralarm.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var navController: NavController
+    private val navController by lazy { findNavController(R.id.main_fragment_container) }
     private val sharedPref by lazy { getDefaultSharedPreferences(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,14 +21,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
-        navController = navHostFragment.navController
+        setupActionBarWithNavController(navController)
 
         // turn off night mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
 
     private fun setPreferredTheme() {
         when (sharedPref.getString("themeColor", "pink")) {

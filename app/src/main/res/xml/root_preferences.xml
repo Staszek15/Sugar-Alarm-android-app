@@ -4,10 +4,12 @@
     <PreferenceCategory app:title="@string/general_header">
 
         <SwitchPreferenceCompat
+            android:widgetLayout="@layout/switch_settings"
             app:key="notificationType"
             app:summaryOff="@string/general_summary_off"
             app:summaryOn="@string/general_summary_on"
-            app:title="@string/notification_type_title" />
+            app:title="@string/notification_type_title"
+            />
 
         <ListPreference
             app:defaultValue="English"
@@ -16,10 +18,6 @@
             app:key="language"
             app:title="@string/language_title"
             app:useSimpleSummaryProvider="true" />
-
-        <Preference
-            android:widgetLayout="@layout/switch_settings"
-            app:title="custom switch" />
 
     </PreferenceCategory>
 
@@ -33,6 +31,16 @@
             app:layout="@layout/theme_buttons_settings" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        app:summary=""
+        app:title="Contact">
+
+        <Preference
+            app:title="Github"
+            app:key="github"/>
+    </PreferenceCategory>
+
 
 
 </PreferenceScreen>

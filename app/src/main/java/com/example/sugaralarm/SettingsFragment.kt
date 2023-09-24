@@ -6,11 +6,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat.recreate
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.example.sugaralarm.databinding.FragmentSettingsBinding
 
@@ -25,9 +23,6 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        binding.toolbar.toolbar.inflateMenu(R.menu.menu)
-        binding.toolbar.toolbar.setTitle(R.string.settings_text)
-        binding.toolbar.toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)  // set toolbar back arrow
         return binding.root
     }
 
@@ -38,7 +33,6 @@ class SettingsFragment : Fragment() {
     }
 
     private fun setupClickListeners() {
-        binding.toolbar.toolbar.setNavigationOnClickListener { findNavController().navigateUp() }
         binding.buttonBlue.setOnClickListener {setChosenTheme("blue")}
         binding.buttonPink.setOnClickListener {setChosenTheme("pink")}
         binding.buttonGithub.setOnClickListener {

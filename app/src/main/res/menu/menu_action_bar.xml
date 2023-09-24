@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:title="settings"
+        android:title="@string/settings_text"
         android:icon="@drawable/ic_settings"
         android:id="@+id/settings"
         app:showAsAction="always" />

@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.SwitchCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/switch2"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/widget_frame"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="40dp"
-    android:minHeight="50dp"
-    android:text="@string/turn_on_alarms"
-    android:textSize="20sp"
-    android:thumb="@mipmap/ic_launcher_round"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/toolbar"
-    app:switchPadding="30sp"
-    app:trackTint="@drawable/switch_track" />
+    android:layout_alignParentEnd="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.SwitchCompat xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:minHeight="4dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:thumb="@mipmap/ic_launcher_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:trackTint="@drawable/switch_track" />
+
+
+</LinearLayout>
