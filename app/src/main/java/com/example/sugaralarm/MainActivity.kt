@@ -3,6 +3,7 @@ package com.example.sugaralarm
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        loadSettings()
         setupActionBarWithNavController(navController)
 
         // turn off night mode
@@ -38,7 +40,11 @@ class MainActivity : AppCompatActivity() {
             "green" -> setTheme(R.style.Theme_PinkTheme)
             else -> setTheme(R.style.Theme_PinkTheme)
         }
+    }
 
+    private fun loadSettings() {
+        val lang = sharedPref.getString("language", "en")
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(lang))
 
     }
 
