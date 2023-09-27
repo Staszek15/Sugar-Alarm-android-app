@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        loadSettings()
+        applySettings()
         setupActionBarWithNavController(navController)
 
         // turn off night mode
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadSettings() {
+    private fun applySettings() {
         val lang = sharedPref.getString("language", "en")
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(lang))
 

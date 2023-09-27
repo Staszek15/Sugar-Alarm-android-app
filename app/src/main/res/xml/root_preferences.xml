@@ -11,6 +11,12 @@
             app:summaryOn="@string/general_summary_on"
             app:title="@string/notification_type_title" />
 
+        <Preference
+            app:key="timeAndMessages"
+            app:title="Times and messages"
+            app:summary="Edit values for buttons."/>
+
+
         <ListPreference
             app:defaultValue="English"
             app:entries="@array/languages_entries"
@@ -18,6 +24,8 @@
             app:key="language"
             app:title="@string/language_title"
             app:useSimpleSummaryProvider="true" />
+
+
 
     </PreferenceCategory>
 
@@ -27,11 +35,12 @@
         android:summary="@string/appearance_summary"
         android:title="@string/appearance_header">
 
-        <Preference
+        <com.example.sugaralarm.CustomButtonsPreference
             app:key="theme_buttons_key"
-            app:layout="@layout/theme_buttons_settings" />
+            android:layout="@layout/theme_buttons_settings" />
 
     </PreferenceCategory>
+
 
     <PreferenceCategory
         android:layout="@layout/preference_text_view"
@@ -41,6 +50,11 @@
         <Preference
             app:key="github"
             app:title="Github" />
+
+        <Preference
+            app:key="mail"
+            app:title="Mail" />
+
     </PreferenceCategory>
 
 

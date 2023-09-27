@@ -6,21 +6,22 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.os.LocaleListCompat
+import androidx.navigation.fragment.findNavController
 import androidx.preference.*
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
-    private val sharedPref by lazy { PreferenceManager.getDefaultSharedPreferences(requireContext()) }
-
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
-
-//        view!!.findViewById<SwitchCompat>(R.id.switch2).isChecked =
-//            sharedPref.getBoolean("notificationType", true)
 
 
         findPreference<SwitchPreferenceCompat>("notificationType")?.setOnPreferenceChangeListener { _, newValue ->
             view!!.findViewById<SwitchCompat>(R.id.switch2).isChecked = newValue as Boolean
+            true
+        }
+
+        findPreference<Preference>("timeAndMessages")?.setOnPreferenceClickListener {
+            findNavController().navigate(R.id.action_settingsFragment_to_settingsFragment2)
             true
         }
 
@@ -36,18 +37,22 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
+        findPreference<Preference>("mail")?.setOnPreferenceClickListener {
+            val emailAddress = "mateusz.stasiak15@wp.pl"
+            val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
+                data = Uri.parse("mailto: $emailAddress")
+                putExtra(Intent.EXTRA_SUBJECT, "Sugar Alarm App email")
+            }
+            startActivity(emailIntent)
+            true
+        }
 
     }
+
+
 }
 
-    //view!!.findViewById<SwitchCompat>(R.id.switch2).isChecked = true
 
-//    private fun setChosenTheme(themeColor: String?) {
-//        when (themeColor) {
-//            "pink" -> activity?.setTheme(R.style.Theme_PinkTheme)
-//            "blue" -> activity?.setTheme(R.style.Theme_BlueTheme)
-//        }
-//        sharedPref.edit { putString("themeColor", themeColor) }
-//        ActivityCompat.recreate(requireActivity())
-//    }
+
+
 

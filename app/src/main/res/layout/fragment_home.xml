@@ -8,7 +8,7 @@
     tools:context=".HomeFragment">
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/buttonOne"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -18,7 +18,7 @@
         android:text="@string/button10_text"
         android:textSize="18sp"
         app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/button30"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTwo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,7 +27,7 @@
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/button30"
+        android:id="@+id/buttonTwo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -36,15 +36,15 @@
         android:text="@string/button30_text"
         android:textSize="18sp"
         app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/button20"
+        app:layout_constraintBottom_toTopOf="@+id/buttonThree"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOne"
         app:layout_constraintVertical_weight="2"
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/button20"
+        android:id="@+id/buttonThree"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -53,15 +53,15 @@
         android:text="@string/button20_text"
         android:textSize="18sp"
         app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/button60"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFour"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button30"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTwo"
         app:layout_constraintVertical_weight="1"
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/button60"
+        android:id="@+id/buttonFour"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -74,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button20"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThree"
         app:layout_constraintVertical_weight="1"
         tools:ignore="TextContrastCheck" />
 
