@@ -22,6 +22,7 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.sugaralarm.SettingsFragment"
         android:label="@string/settings_text">
+
         <action
             android:id="@+id/action_settingsFragment2_to_homeFragment"
             app:destination="@id/homeFragment"
@@ -45,7 +46,7 @@
             android:id="@+id/action_settingsFragment2_to_settingsFragment"
             app:destination="@id/settingsFragment"
             app:enterAnim="@android:anim/fade_in"
-
+            app:exitAnim="@android:anim/fade_out"
             app:popEnterAnim="@android:anim/fade_in"
             app:popExitAnim="@android:anim/fade_out" />
     </fragment>

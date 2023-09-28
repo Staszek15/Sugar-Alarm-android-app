@@ -9,7 +9,7 @@
             app:key="notificationType"
             app:summaryOff="@string/general_summary_off"
             app:summaryOn="@string/general_summary_on"
-            app:title="@string/notification_type_title" />
+            app:title="@string/notification_type_title"/>
 
         <Preference
             app:key="timeAndMessages"

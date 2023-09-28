@@ -36,4 +36,10 @@
         <item name="android:navigationBarColor">@color/navy_button</item>
     </style>
 
+
+    <!-- Overlay to set Action Bar color -->
+    <style name="ThemeOverlay.AppCompat.ActionBar" parent="ThemeOverlay.AppCompat">
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
 </resources>
