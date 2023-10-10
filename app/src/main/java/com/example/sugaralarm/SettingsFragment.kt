@@ -11,9 +11,13 @@ import androidx.preference.*
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
+    private val sharedPref by lazy { PreferenceManager.getDefaultSharedPreferences(requireContext()) }
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
 
+        //set language
+        findPreference<ListPreference>("language")?.value = sharedPref.getString("language", "English")
 
         findPreference<SwitchPreferenceCompat>("notificationType")?.setOnPreferenceChangeListener { _, newValue ->
             view!!.findViewById<SwitchCompat>(R.id.switch2).isChecked = newValue as Boolean

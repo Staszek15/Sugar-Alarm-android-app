@@ -30,19 +30,19 @@
         android:text="@string/blue_mode"
         app:cornerRadius="90dp"
 
-        app:layout_constraintEnd_toStartOf="@id/button_green"
+        app:layout_constraintEnd_toStartOf="@id/button_beige"
         app:layout_constraintStart_toEndOf="@+id/button_pink"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_green"
+        android:id="@+id/button_beige"
         android:layout_width="wrap_content"
         android:textSize="12sp"
 
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/beige_button"
         android:padding="12dp"
-        android:text="@string/green_theme"
+        android:text="@string/beige_theme"
         app:cornerRadius="90dp"
 
         app:layout_constraintEnd_toEndOf="parent"

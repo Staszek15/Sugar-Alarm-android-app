@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     private fun setPreferredTheme() {
         when (sharedPref.getString("themeColor", "pink")) {
             "blue" -> setTheme(R.style.Theme_BlueTheme)
-            "green" -> setTheme(R.style.Theme_PinkTheme)
+            "beige" -> setTheme(R.style.Theme_BeigeTheme)
             else -> setTheme(R.style.Theme_PinkTheme)
         }
     }

@@ -37,6 +37,24 @@
     </style>
 
 
+    <style name="Theme.BeigeTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/beige_button</item>
+        <item name="colorPrimaryVariant">@color/beige_button</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/beige_button</item>
+        <!-- Background color. -->
+        <item name="android:colorBackground">@color/beige_background</item>
+        <!-- Navigation bar color. -->
+        <item name="android:navigationBarColor">@color/beige_button</item>
+    </style>
+
+
     <!-- Overlay to set Action Bar color -->
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="ThemeOverlay.AppCompat">
         <item name="android:textColorPrimary">@android:color/white</item>

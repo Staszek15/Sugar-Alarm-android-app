@@ -3,24 +3,26 @@
 <resources>
     <string name="app_name">Sugar Alarm</string>
     <string name="settings_text">Settings</string>
+
     <string name="button10_text">10 min</string>
     <string name="button20_text">20 min</string>
     <string name="button30_text">30 min</string>
     <string name="button60_text">1 h</string>
+
     <string name="pink_mode">Pink\n theme</string>
     <string name="blue_mode">Blue\n theme</string>
-    <string name="text_github">Author\'s Github</string>
-
-
+    <string name="beige_theme">Beige\n theme</string>
 
 
     <!-- General Preferences -->
     <string name="general_header">General</string>
-    <string name="general_summary_off">Alarms will be used instead of timers.</string>
-    <string name="general_summary_on">Timers will be used instead of alarms.</string>
     <string name="notification_type_title">Notification type</string>
+    <string name="notification_type_summary_off">Alarms will be used instead of timers.</string>
+    <string name="notification_type_summary_on">Timers will be used instead of alarms.</string>
+    <string name="times_and_messages_title">Times and messages</string>
+    <string name="times_and_messages_summary">Edit values for buttons.</string>
     <string name="language_title">Language</string>
-    <string name="green_theme">Green\n theme</string>
+
 
     <!-- Appearance Preferences -->
     <string name="appearance_header">Appearance</string>
@@ -29,7 +31,7 @@
 
     <!-- Contact Preferences -->
     <string name="contact_header">Contact</string>
-    <string name="contact_summary">Select a way of contact.</string>
-
+    <string name="contact_summary">Select a way of contact below.</string>
+    <string name="text_github">Author\'s github</string>
 
 </resources>

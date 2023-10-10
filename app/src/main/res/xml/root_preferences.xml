@@ -7,14 +7,14 @@
 
         <com.example.sugaralarm.CustomSwitchPreference
             app:key="notificationType"
-            app:summaryOff="@string/general_summary_off"
-            app:summaryOn="@string/general_summary_on"
+            app:summaryOff="@string/notification_type_summary_off"
+            app:summaryOn="@string/notification_type_summary_on"
             app:title="@string/notification_type_title"/>
 
         <Preference
             app:key="timeAndMessages"
-            app:title="Times and messages"
-            app:summary="Edit values for buttons."/>
+            app:title="@string/times_and_messages_title"
+            app:summary="@string/times_and_messages_summary"/>
 
 
         <ListPreference

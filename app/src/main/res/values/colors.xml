@@ -10,4 +10,7 @@
     <color name="dirty_white">#dbdad7</color>
     <color name="navy_button">#1B4965</color>
     <color name="blue_background">#ADDDFF</color>
+
+    <color name="beige_background">#FDEACA</color>
+    <color name="beige_button">#95775A</color>
 </resources>
