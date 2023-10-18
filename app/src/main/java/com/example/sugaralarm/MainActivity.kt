@@ -22,11 +22,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         applySettings()
         setupActionBarWithNavController(navController)
+        //setupViewPager()
 
         // turn off night mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+    }
+
+    private fun setupViewPager() {
+        // Instantiate a ViewPager2 and a PagerAdapter.
+        val viewPager = binding.viewPager
+
+        // The pager adapter, which provides the pages to the view pager widget.
+        viewPager.adapter = ScreenSlidePagerAdapter(this)
     }
 
     override fun onSupportNavigateUp(): Boolean {
